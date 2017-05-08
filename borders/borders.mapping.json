@@ -1,0 +1,17 @@
+{
+	"template": "borders",
+	"settings": {
+		"number_of_shards": 4
+	},
+	"mappings": {
+		"countries": {
+			"properties": {
+				"geometry": {
+					"type": "geo_shape",
+					"tree": "quadtree",
+					"precision": "1000m"
+				}
+			}
+		}
+	}
+}
