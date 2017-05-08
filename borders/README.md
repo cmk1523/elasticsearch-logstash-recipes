@@ -8,7 +8,7 @@ Builds in an index of countries which allows you find the country of a given lat
 Requirements
 =========
 
-* Tested on Ubuntu Server 17.04
+* Tested on Ubuntu Server 17.04, Elasticsearch 5.4.0 and Logstash 5.4.0
 
 A) Downloaded the "world-country-boundaries" shapefile zip file from: https://koordinates.com/layer/1103-world-country-boundaries/ 9 (see attached file: kx-world-country-boundaries-SHP.zip)
 
