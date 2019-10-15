@@ -5,177 +5,175 @@ PUT _template/news
     "number_of_shards": 2
   },
   "mappings": {
-    "type1": {
-      "properties": {
-        "@timestamp": {
-          "type": "date"
-        },
-        "@version": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
+    "properties": {
+      "@timestamp": {
+        "type": "date"
+      },
+      "@version": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
           }
-        },
-        "abstract": {
-          "type": "text",
-          "fielddata": true,
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "byline": {
-          "type": "text",
-          "fielddata": true,
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "created_date": {
-          "type": "date",
-          "format": "date_time_no_millis"
-        },
-        "des_facet": {
-          "type": "keyword"
-        },
-        "geo_facet": {
-          "type": "keyword"
-        },
-        "item_type": {
-          "type": "keyword"
-        },
-        "kicker": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "material_type_facet": {
-          "type": "keyword"
-        },
-        "multimedia": {
-          "properties": {
-            "caption": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "copyright": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "format": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "height": {
-              "type": "long"
-            },
-            "subtype": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "type": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "url": {
-              "type": "text",
-              "fields": {
-                "keyword": {
-                  "type": "keyword",
-                  "ignore_above": 256
-                }
-              }
-            },
-            "width": {
-              "type": "long"
-            }
-          }
-        },
-        "org_facet": {
-          "type": "keyword"
-        },
-        "per_facet": {
-          "type": "keyword"
-        },
-        "published_date": {
-          "type": "date",
-          "format": "date_time_no_millis"
-        },
-        "section": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "short_url": {
-          "type": "text",
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "subsection": {
-          "type": "keyword"
-        },
-        "title": {
-          "type": "text",
-          "fielddata": true,
-          "fields": {
-            "keyword": {
-              "type": "keyword",
-              "ignore_above": 256
-            }
-          }
-        },
-        "updated_date": {
-          "type": "date",
-          "format": "date_time_no_millis"
-        },
-        "url": {
-          "type": "keyword"
         }
+      },
+      "abstract": {
+        "type": "text",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "byline": {
+        "type": "text",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "created_date": {
+        "type": "date",
+        "format": "date_time_no_millis"
+      },
+      "des_facet": {
+        "type": "keyword"
+      },
+      "geo_facet": {
+        "type": "keyword"
+      },
+      "item_type": {
+        "type": "keyword"
+      },
+      "kicker": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "material_type_facet": {
+        "type": "keyword"
+      },
+      "multimedia": {
+        "properties": {
+          "caption": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "copyright": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "format": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "height": {
+            "type": "long"
+          },
+          "subtype": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "type": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "url": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "width": {
+            "type": "long"
+          }
+        }
+      },
+      "org_facet": {
+        "type": "keyword"
+      },
+      "per_facet": {
+        "type": "keyword"
+      },
+      "published_date": {
+        "type": "date",
+        "format": "date_time_no_millis"
+      },
+      "section": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "short_url": {
+        "type": "text",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "subsection": {
+        "type": "keyword"
+      },
+      "title": {
+        "type": "text",
+        "fielddata": true,
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 256
+          }
+        }
+      },
+      "updated_date": {
+        "type": "date",
+        "format": "date_time_no_millis"
+      },
+      "url": {
+        "type": "keyword"
       }
     }
   }
